@@ -4,7 +4,9 @@ organization := "com.weather"
 version := "1.0.0"
 
 lazy val root = (project in file("."))
-  .enablePlugins(PlayScala, GraalVMNativeImagePlugin)
+  .enablePlugins(PlayScala, 
+                 DockerPlugin,
+                 GraalVMNativeImagePlugin)
 
 graalVMNativeImageGraalVersion := Some("19.1.1")
 
